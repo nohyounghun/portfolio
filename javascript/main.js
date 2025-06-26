@@ -59,10 +59,23 @@ function scrollToClosestSection(direction) {
 
 let lastScrollY = window.scrollY;
 
-window.addEventListener('wheel', (e) => {
+/* 1024px 이상에서만 스크롤 스냅 */
+let wheelHandler = (e) => {
   const direction = e.deltaY > 0 ? 'down' : 'up';
   scrollToClosestSection(direction);
-}, { passive: true });
+};
+
+function handleScrollEventBinding(){
+  if(window.innerWidth > 1024){
+    window.addEventListener('wheel', wheelHandler, { passive: false });
+  }else{
+    window.removeEventListener('wheel', wheelHandler);
+  }
+}
+
+handleScrollEventBinding();
+
+window.addEventListener('resize', handleScrollEventBinding);
 
 document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
@@ -77,6 +90,8 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+
 
 
 /* 다크모드 아이콘 */
