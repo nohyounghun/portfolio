@@ -192,4 +192,31 @@ animatedElements.forEach(element => {
   observer.observe(element);
 });
 
+/* 풍선 커서 */
+const cursor = document.querySelector('.balloon-cursor');
+document.addEventListener('mousemove', (e) => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+});
+
+/* 클릭시 풍선 이모지  */
+document.addEventListener('click', (e) => {
+  const balloon = document.createElement('span');
+  balloon.textContent = '🎈';
+  balloon.style.position = 'fixed';
+  balloon.style.left = e.clientX + 'px';
+  balloon.style.top = e.clientY + 'px';
+  balloon.style.fontSize = '20px';
+  balloon.style.opacity = '1';
+  balloon.style.transition = 'all 1s ease-out';
+  document.body.appendChild(balloon);
+
+  setTimeout(() => {
+    balloon.style.top = (e.clientY - 100) + 'px';
+    balloon.style.opacity = '0';
+  }, 0);
+
+  setTimeout(() => balloon.remove(), 1000);
+});
+
 

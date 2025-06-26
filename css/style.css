@@ -431,3 +431,30 @@ font-weight: 300;
 color: #808080;
 margin-right: 20px;
 }
+
+/* 마우스 풍선 커서 */
+.balloon-cursor {
+  width: 15px;
+  height: 15px;
+  background-color: rgba(245, 84, 73, 0.8);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 1002;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease;
+}
+
+body.dark_mode .circle-cursor {
+  border-color: #e0e0e0;
+}
+
+/* 반응형 태블릿 */
+@media screen and (min-width:768px) and (max-width: 1024px) {
+
+}
+
+/* 반응형 모바일 */
+@media screen and (max-width: 767px) {
+
+}
