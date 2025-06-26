@@ -2,8 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 html, body {
-  scroll-snap-type: y mandatory;
-  overscroll-behavior: none;
+/* scroll-snap-type: y mandatory; */
+overscroll-behavior: none;
 }
 section {
   min-height: 100vh;
@@ -269,124 +269,117 @@ body.dark_mode #toggle_dark_mode p{
 }
 
 /* project */
-#project {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 80px 0;
-  box-sizing: border-box;
-  width: 1400px;
-  max-width: 100%;
-  margin: 0 auto; 
-}
-
-.project_title {
-  font-size: var(--text_48);
-  color: var(--base_color);
-  margin-bottom: 60px;
-  text-align: center;
-  width: 100%; 
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
-  gap: 30px;
-  width: 90%; 
-  max-width: 1200px; 
-}
-
-.project-card {
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.project-image {
-  position: relative;
+#project1, #project2, #project3{
   width: 100%;
-  height: 250px; 
-  overflow: hidden;
 }
-
-.project-image img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-  transition: transform 0.3s ease-in-out;
-}
-
-.project-card:hover .project-image img {
-  transform: scale(1.05);
-}
-
-.project-image .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.project-card:hover .project-image .overlay {
-  opacity: 1;
-}
-
-.project-tech {
-  font-size: var(--text_14);
-  margin-bottom: 30px;
-}
-
-.view-details {
+.ex_title{
+  color: #808080;
+  font-weight: 400;
   display: inline-block;
-  padding: 10px 20px;
-  border: 1px solid #fff;
-  border-radius: 5px;
-  text-decoration: none;
-  color: #fff;
-  font-size: var(--text_14);
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  width: 100px;
+  line-height: 2;
 }
-
-.view-details:hover {
-  background-color: var(--base_color);
-  border-color: var(--base_color);
-}
-
-.project-name {
-  padding: 20px;
-  font-size: var(--text_20);
+.project_info{
   font-weight: bold;
+}
+.brand_ex{
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.brand_name{
+  font-size: 60px;
+  font-weight: bold;
+}
+.review{
+  width: 82%;
+  line-height: 2;
+}
+.bg_title{
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
 }
+.bg_title h3{
+  font-size: 80px;
+  font-weight: bold;
+}
+.bg_title a{
+  display: inline-block;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-top: 30px;
+}
 
-.project-brief {
-  padding: 0 20px 20px;
-  font-size: var(--text_14);
-  line-height: 1.6;
-  color: #555;
-  text-align: left;
-  line-height: 25px;
+
+/* project1 */
+#project1{
+  display: flex;
+  justify-content: space-around;
+  gap: 80px;
+  background-color: #bd0013;
+  color: #fff;
 }
-.project-brief-title{
-  color: #a0a0a0;
+.project1_left{
+  width: 60%;
+  position: relative;
 }
+.project1_bg img{
+  width: 100%;
+  filter: brightness(0.8);
+}
+.project1_left .bg_title a:hover{
+  background-color: #fff;
+  color: #fe001a;
+}
+.project1_right{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.project1_right .ex_title{
+  color: #fff;
+  font-weight: 300;
+}
+
+
+/* project2 */
+#project2{
+  display: flex;
+  justify-content: space-around;
+  gap: 80px;
+}
+.project2_left{
+  width: 60%;
+  position: relative;
+}
+.project2_bg img{
+  width: 100%;
+  filter: brightness(0.8);
+}
+.project2_left .bg_title a:hover{
+  background-color: #fff;
+  color: #fe001a;
+}
+.project2_right{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.project2_right .ex_title{
+  color: #fff;
+  font-weight: 300;
+}
+
+
+
+
 /* 다크 모드 스타일 */
 body.dark_mode .project-card {
   background-color: #1e1e1e;

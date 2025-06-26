@@ -161,6 +161,23 @@ window.addEventListener('scroll', ()=>{
   }else{
     header.classList.remove('scrolled');
   }
+
+  /* project1 섹션에서 스타일 변경  */
+const project1Section = document.getElementById('project1');
+if(project1Section){
+  const rect = project1Section.getBoundingClientRect();
+  if(rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight /2){
+    if(!document.body.classList.contains('dark_mode')){
+      toggle_btn_p.style.color = '#fff';
+      top_btn_img.src = './images/top_btn_white.png';
+    }
+  }else{
+    if(!document.body.classList.contains('dark_mode')){
+      toggle_btn_p.style.color = 'var(--base_color)';
+      top_btn_img.src = './images/top_btn.png';
+    }
+  }
+}
 });
 
 /* 탑버튼 */
@@ -184,28 +201,7 @@ topBtn.addEventListener('click', () => {
 });
 
 /* project */
-const animatedElements = document.querySelectorAll('.animate-on-scroll');
 
-const observerOptions = {
-  root: null, 
-  rootMargin: '0px', 
-  threshold: 0.1 
-};
-
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const delay = parseInt(entry.target.dataset.aosDelay) || 0;
-      setTimeout(() => {
-        entry.target.classList.add('is-visible');
-      }, delay);
-    }
-  });
-}, observerOptions);
-
-animatedElements.forEach(element => {
-  observer.observe(element);
-});
 
 /* 풍선 커서 */
 const cursor = document.querySelector('.balloon-cursor');
