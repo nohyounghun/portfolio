@@ -162,11 +162,17 @@ window.addEventListener('scroll', ()=>{
     header.classList.remove('scrolled');
   }
 
-  /* project1 섹션에서 스타일 변경  */
+/* project1,2 섹션에서 스타일 변경  */
 const project1Section = document.getElementById('project1');
-if(project1Section){
-  const rect = project1Section.getBoundingClientRect();
-  if(rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight /2){
+const project2Section = document.getElementById('project2');
+const project3Section = document.getElementById('project3');
+
+if(project1Section && project2Section){
+  const rect1 = project1Section.getBoundingClientRect();
+  const rect2 = project2Section.getBoundingClientRect();
+  const rect3 = project3Section.getBoundingClientRect();
+
+  if((rect1.top <= window.innerHeight / 2 && rect1.bottom >= window.innerHeight /2 || rect2.top <= window.innerHeight / 2 && rect2.bottom >= window.innerHeight /2 || rect3.top <= window.innerHeight / 2 && rect3.bottom >= window.innerHeight /2) && !document.body.classList.contains('dark_mode')){
     if(!document.body.classList.contains('dark_mode')){
       toggle_btn_p.style.color = '#fff';
       top_btn_img.src = './images/top_btn_white.png';
