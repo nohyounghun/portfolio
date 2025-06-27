@@ -140,7 +140,7 @@ body.dark_mode .scroll-down {
 #toggle_dark_mode{
   position: fixed;
   bottom: 10%;
-  right: 5%;
+  right: 2.8%;
   z-index: 1000;
   background: none;
   border: none;
@@ -181,7 +181,7 @@ body.dark_mode #toggle_dark_mode p{
 #top_btn{
   position: fixed;
   bottom: 3%;
-  right: 5.3%;
+  right: 3%;
   z-index: 1000;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
