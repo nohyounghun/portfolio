@@ -556,6 +556,7 @@ body.dark_mode .circle-cursor {
 @media screen and (max-width: 767px) {
   html, body {
     scroll-snap-type: none;
+    overflow-x: hidden;
   }
   section{
     width: 100%;
