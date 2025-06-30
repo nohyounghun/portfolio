@@ -293,10 +293,6 @@ body.dark_mode #toggle_dark_mode p{
   font-size: 60px;
   font-weight: bold;
 }
-.review{
-  width: 82%;
-  line-height: 2;
-}
 .bg_title{
   color: #fff;
   position: absolute;
@@ -316,6 +312,34 @@ body.dark_mode #toggle_dark_mode p{
   border-radius: 10px;
   padding: 10px 15px;
   margin-top: 30px;
+}
+.stack_badges {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 20px;
+}
+
+.badge.html { background-color: #e44d26; }
+.badge.css { background-color: #2965f1; }
+.badge.js { background-color: #f7df1e; color: #000; }
+.badge.figma { background-color: #a259ff; }
+.badge.react { background-color: #61dafb; color: #000; }
+.badge.jquery { background-color: #0769ad; }
+.badge.php { background-color: #8892be; }
+.badge.mysql { background-color: #00758f; }
+.review{
+  width: 82%;
+  line-height: 2;
 }
 
 
@@ -698,5 +722,8 @@ body.dark_mode .circle-cursor {
   }
   #contact{
     width: 90%;
+  }
+  .stack_badges{
+    justify-content: center;
   }
 }
