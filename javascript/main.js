@@ -117,6 +117,7 @@ toggle_btn.addEventListener('click', ()=>{
     top_btn_img.src = './images/top_btn_white.png';
     github_logo.src = './images/github_white.png';
     jquery_logo.src = './images/jquery_white.png';
+    toggle_btn_p.style.color = '#fff';
     animateImageChange(toggle_btn_img, './images/dark.png', '다크모드');
 
     toggle_btn_p.textContent = 'DARK';
@@ -125,6 +126,7 @@ toggle_btn.addEventListener('click', ()=>{
     top_btn_img.src = './images/top_btn.png';
     github_logo.src = './images/github.png';
     jquery_logo.src = './images/jquery.png';
+    toggle_btn_p.style.color = '#333';
     animateImageChange(toggle_btn_img, './images/light.png', '라이트모드');
 
     toggle_btn_p.textContent = 'LIGHT';
