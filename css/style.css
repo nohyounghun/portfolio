@@ -314,7 +314,6 @@ body.dark_mode #toggle_dark_mode p{
   margin-top: 30px;
 }
 .stack_badges {
-  margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
@@ -340,6 +339,20 @@ body.dark_mode #toggle_dark_mode p{
 .review{
   width: 82%;
   line-height: 2;
+}
+
+/* 스와이퍼 슬라이드 */
+.swiper{
+  width: 100%;
+  max-width: 500px;
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.swiper-slide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 
@@ -379,7 +392,23 @@ body.dark_mode #toggle_dark_mode p{
   color: #fff;
   font-weight: 300;
 }
-
+.project1_right .swiper, .project2_left .swiper, .project3_right .swiper{
+  align-self: flex-start !important;
+  margin: 20px 0 0 0 !important;     
+  width: 100%;
+  max-width: 500px;
+  justify-content: flex-start;
+}
+.project1_right .swiper-pagination-bullet, .project2_left .swiper-pagination-bullet{
+  background-color: #ccc;
+  opacity: 1;
+}
+.project1_right .swiper-pagination-bullet-active, .project2_left .swiper-pagination-bullet-active{
+  background-color: #fe001a;
+  width: 20px;
+  border-radius: 10px;
+  transition: .3s ease;
+}
 
 /* project2 */
 #project2{
@@ -459,6 +488,11 @@ body.dark_mode #toggle_dark_mode p{
 .project3_right .ex_title{
   color: #fff;
   font-weight: 300;
+}
+.project3_right .swiper-pagination-bullet-active{
+  width: 20px;
+  border-radius: 10px;
+  transition: .3s ease;
 }
 
 
@@ -690,7 +724,7 @@ body.dark_mode .circle-cursor {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0;
+    padding: 50px 0;
     gap: 0;
   }
   .project_info{

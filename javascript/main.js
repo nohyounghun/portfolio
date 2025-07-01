@@ -91,9 +91,6 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
   });
 });
 
-
-
-
 /* 다크모드 아이콘 */
 toggle_btn.addEventListener('click', ()=>{
   const body = document.body;
@@ -238,4 +235,18 @@ document.addEventListener('click', (e) => {
   setTimeout(() => balloon.remove(), 1000);
 });
 
-
+/* 스와이퍼 슬라이드 */
+document.addEventListener('DOMContentLoaded', () => {
+  new Swiper('.project-swiper', {
+    loop: true,
+    spaceBetween: 20,
+    pagination:{
+      el : '.swiper-pagination',
+      clickable: true,
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+  });
+});
