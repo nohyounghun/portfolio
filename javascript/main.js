@@ -7,6 +7,7 @@ const top_btn_img = document.querySelector('#top_btn a img');
 const github_logo = document.querySelector('.skill .github_logo img');
 const jquery_logo = document.querySelector('.skill .jquery_logo img');
 
+
 /* 스크롤시 부드럽게 이동 */
 const sections = document.querySelectorAll('section');
 let isScrolling = false;
@@ -146,6 +147,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
       const cursor = document.createElement('span');
       cursor.classList.add('cursor');
       mainTextElement.appendChild(cursor);
+
+      mainTextElement.classList.add('glow-finish')
     }
   }
   typeWriter();
@@ -250,3 +253,5 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   });
 });
+
+
