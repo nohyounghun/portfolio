@@ -239,6 +239,10 @@ body.dark_mode #toggle_dark_mode p{
 #top_btn.show{
   opacity: 1;
 }
+.title{
+  padding-bottom: 150px;
+  font-size: 48px;
+}
 
 /* resume */
 #resume{
@@ -258,7 +262,7 @@ body.dark_mode #toggle_dark_mode p{
 .resume_left > div{
   display: flex;
   align-items: center;
-  gap: 150px;
+  gap: 100px;
   margin-bottom: 150px;
 }
 .info{
@@ -270,11 +274,15 @@ body.dark_mode #toggle_dark_mode p{
 .info_name, .wording{
   font-weight: bold;
 }
-.info_detail{
+.info_detail{ 
   font-weight: 300;
 }
 .wording{
   font-size: 18px;
+  font-weight: 500;
+}
+.wording_bold{
+  font-weight: bold;
 }
 /* resume_right */
 .resume_right{
